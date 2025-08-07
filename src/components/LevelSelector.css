@@ -1,0 +1,158 @@
+.level-selector {
+  text-align: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.level-title {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.level-description {
+  color: #666;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.puzzle-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.puzzle-group {
+  text-align: center;
+}
+
+.group-title {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.puzzles-grid {
+  display: block;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.puzzle-square {
+  width: 60px;
+  height: 60px;
+  background-color: #f0f0f0;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 4px;
+  cursor: pointer;
+  position: relative;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #333;
+  transition: all 0.2s ease;
+  text-align: center;
+  line-height: 60px;
+}
+
+.puzzle-square.completed {
+  background-color: #4CAF50;
+  border-color: #2E7D32;
+  color: white;
+}
+
+.puzzle-square:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.completion-check {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  font-size: 0.6rem;
+  color: white;
+  background-color: #2E7D32;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.puzzle-tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  white-space: nowrap;
+  z-index: 1000;
+  margin-bottom: 8px;
+  pointer-events: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .puzzle-groups {
+    gap: 20px;
+    padding: 10px;
+  }
+  
+  .group-title {
+    font-size: 1.3rem;
+  }
+  
+  .puzzles-grid {
+    gap: 6px;
+  }
+  
+  .puzzle-square {
+    width: 60px;
+    height: 60px;
+    font-size: 0.7rem;
+    line-height: 60px;
+    margin: 3px;
+  }
+  
+  .level-title {
+    font-size: 2rem;
+  }
+  
+  .level-description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .puzzle-groups {
+    gap: 15px;
+  }
+  
+  .group-title {
+    font-size: 1.1rem;
+  }
+  
+  .puzzle-square {
+    width: 50px;
+    height: 50px;
+    font-size: 0.6rem;
+    line-height: 50px;
+    margin: 2px;
+  }
+} 
