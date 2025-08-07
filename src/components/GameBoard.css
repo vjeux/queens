@@ -89,6 +89,39 @@
   font-size: 1.2rem;
 }
 
+.game-rules {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f8f9fa;
+  max-width: 500px;
+}
+
+.game-rules h3 {
+  margin: 0 0 10px 0;
+  color: #333;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.game-rules ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.game-rules li {
+  margin-bottom: 5px;
+}
+
+.game-rules p {
+  margin-top: 15px;
+  font-size: 0.8rem;
+  color: #555;
+}
+
 @media (max-width: 768px) {
   .board-square {
     width: 40px;

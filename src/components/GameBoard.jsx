@@ -154,6 +154,18 @@ const GameBoard = ({ board, squares, setSquareValue }) => {
           <span>Single click or drag to mark as impossible (no queen)</span>
         </div>
       </div>
+
+      <div className="game-rules">
+        <h3>Rules:</h3>
+        <ul>
+          <li>Place 1 queen on each row, column, and color region</li>
+          <li>2 queens cannot be adjacent horizontally, vertically, or diagonally</li>
+        </ul>
+        <p>
+          Note: The name of the game is a bit confusing when thinking in chess terms.
+          The constraints are Rook + King moves instead of how the Queen moves.
+        </p>
+      </div>
     </div>
   )
 }
