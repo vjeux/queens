@@ -75,7 +75,7 @@ function App() {
         if (q1.col === q2.col) {
           return false
         }
-        if (Math.abs(q1.row - q2.row) + Math.abs(q1.col - q2.col) <= 2) {
+        if (Math.abs(q1.row - q2.row) === Math.abs(q1.col - q2.col)) {
           return false
         }
       }
