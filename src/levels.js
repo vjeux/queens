@@ -1,3 +1,4 @@
+// Extracted from https://queensgame.vercel.app/
 const levels = [
     {size:7,colorRegions:[["A","A","A","A","A","A","A"],["A","A","A","B","C","C","A"],["A","A","B","B","B","C","C"],["D","B","B","B","B","B","E"],["D","D","B","B","B","E","E"],["D","B","B","F","B","B","F"],["G","G","G","F","F","F","F"]]},
     {size:7,colorRegions:[["A","A","A","A","A","A","A"],["A","A","B","A","C","C","A"],["A","B","B","D","D","C","C"],["A","B","E","E","D","D","C"],["A","A","A","E","E","C","C"],["A","A","F","F","G","G","C"],["A","A","A","F","F","G","G"]]},
