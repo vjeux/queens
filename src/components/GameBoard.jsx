@@ -4,6 +4,7 @@ import './GameBoard.css'
 
 const GameBoard = ({ board, squares, setSquareValue }) => {
   const [lastClickTime, setLastClickTime] = useState(0)
+  const [lastClickCell, setLastClickCell] = useState(null)
   const [isDragging, setIsDragging] = useState(false)
   const [dragStartSquare, setDragStartSquare] = useState(null)
   const [dragAction, setDragAction] = useState(null)
@@ -14,7 +15,7 @@ const GameBoard = ({ board, squares, setSquareValue }) => {
     const timeDiff = currentTime - lastClickTime
     const squareState = getSquareState(row, col)
 
-    if (timeDiff < 300 && lastClickTime > 0) {
+    if (timeDiff < 300 && lastClickTime > 0 && lastClickCell === `${row}-${col}`) {
       // Double click detected - place or remove queen
       setLastClickTime(0)
       setSquareValue(row, col, squareState === 'queen' ? 'empty' : 'queen')
@@ -37,6 +38,7 @@ const GameBoard = ({ board, squares, setSquareValue }) => {
         setSquareValue(row, col, squareState === 'x' ? 'empty' : 'x') // Toggle X mark
       }
       setLastClickTime(currentTime)
+      setLastClickCell(`${row}-${col}`)
     }
 
   }
